@@ -1,5 +1,6 @@
 package edu.craptocraft;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Before;
@@ -25,6 +26,10 @@ public class EntryTest {
     @Test
     public void constructorTest(){
         assertNotNull(entry);
+    }
+    @Test
+    public void toStringTest() {
+        assertEquals("email: squanchy@closet.in\nAddress: Nearest closet s/n, 90210, Jerry's House, Via Lactea\nPayment: squanchy@paypal.com\nTotal: 109.99 €", entry.toString());
     }
 
 }

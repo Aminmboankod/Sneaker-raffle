@@ -35,6 +35,14 @@ public class Entry {
         return total;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public Sizes getSize() {
+        return size;
+    }
+
     public void setTotal(Double total) {
         this.total = total;
     }
@@ -48,5 +56,13 @@ public class Entry {
     public void setSize(Sizes size) {
         this.size = size;
     }
-    
+
+    public String getPayment() {
+        return this.payment;
+    }
+
+    @Override
+    public String toString() {
+        return "email: " + getEmail() + "\nAddress: " + getAddress() + "\nPayment: " + getPayment() + "\nTotal: " + getTotal()+" €"; 
+    }
 }

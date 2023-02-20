@@ -17,8 +17,8 @@ public class GUI {
     
     }
 
-    public void drawEntry(Entry user) {
-
+    public static void drawEntry(Entry user) {
+        System.out.println(user.toString());
     }
 
 
