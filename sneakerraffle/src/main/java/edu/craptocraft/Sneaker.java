@@ -5,6 +5,7 @@ package edu.craptocraft;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Sneaker implements Raffle{
 
@@ -90,7 +91,9 @@ public class Sneaker implements Raffle{
 
     @Override
     public void register(Entry entry) {
-        this.raffles.putIfAbsent(entry.email, entry.payment);
+        while (!(getRaffles().containsKey(entry.email) || getRaffles().containsValue(entry.payment))) {
+            this.raffles.putIfAbsent(entry.email, entry.payment);
+        }
         
     }
     

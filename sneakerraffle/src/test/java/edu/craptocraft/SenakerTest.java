@@ -10,9 +10,12 @@ public class SenakerTest {
 
     Raffle craft;
     Entry entry;
+    Entry doubleEntry;
+    
 
     @Before
     public void setup() {
+        doubleEntry = new Entry("squan.chy@closet.in");
         entry = new Entry("squanchy@closet.in");
         craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
     }
@@ -35,10 +38,10 @@ public class SenakerTest {
         craft.register(entry);
         assertEquals(1, craft.getRaffles().size());
 
-    // Squanchy intenta registrar otra participacion
-    // pero el sistema bloquea el registro.
-    // El total de participaciones sigue siendo 1
-    
+        // Squanchy intenta registrar otra participacion
+        // pero el sistema bloquea el registro.
+        // El total de participaciones sigue siendo 1
+        
         craft.register(entry);
         assertEquals(1, craft.getRaffles().size());
 
