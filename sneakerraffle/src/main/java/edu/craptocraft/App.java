@@ -62,10 +62,10 @@ public class App
          * configurar el rango de tallas de una sneaker.
          */
 
-    //     Raffle craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
-    //     // indica el rango de tallas
-    //     craft.sizesRun(Sizes.CUARENTA, Sizes.CUARENTAYDOS);
-    //     GUI.drawSneaker(craft);
+        Raffle craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
+        // indica el rango de tallas
+        craft.sizesRun(Sizes.CUARENTA, Sizes.CUARENTAYDOS);
+        GUI.drawSneaker(craft);
 
     //     /**
     //      * El usuario Squanchy introduce sus datos
