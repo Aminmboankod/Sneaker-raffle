@@ -27,4 +27,6 @@ public class SenakerTest {
     public void toStringTest(){
         assertEquals("Nike Craft General Purpose\nBrown\n109.99 €\nnull", craft.toString());
     }
+
+    
 }

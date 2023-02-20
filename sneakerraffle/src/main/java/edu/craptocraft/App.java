@@ -82,18 +82,18 @@ public class App
     //      * email y método de pago.
     //      */
 
-    //     Entry entry = new Entry("squanchy@closet.in");
-    //     entry.setUserName("Squanchy");
-    //     entry.setSize(Sizes.CUARENTA);
-    //     entry.setAddress("Nearest closet s/n, 90210, Jerry's House, Via Lactea");
-    //     entry.setTotal(craft.price());
-    //     entry.payment("squanchy@paypal.com");
+        Entry entry = new Entry("squanchy@closet.in");
+        entry.setUserName("Squanchy");
+        entry.setSize(Sizes.CUARENTA);
+        entry.setAddress("Nearest closet s/n, 90210, Jerry's House, Via Lactea");
+        entry.setTotal(craft.price());
+        entry.payment("squanchy@paypal.com");
 
     //     /**
     //      * Añade a la clase GUI la rutina drawEntry()
     //      * para representar la entrada.
     //      */
-    //     GUI.drawEntry(entry);
+        GUI.drawEntry(entry);
 
     //     /**
     //      * Añade la participacion en la rifa.
