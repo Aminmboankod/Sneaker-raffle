@@ -3,9 +3,8 @@ package edu.craptocraft;
 
 
 import java.util.EnumSet;
-
-
-import javax.swing.RowFilter.Entry;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Sneaker implements Raffle{
 
@@ -13,7 +12,7 @@ public class Sneaker implements Raffle{
     private String name;
     private Double price;
     public EnumSet<Sizes> sizes;
-    
+    public Map<String, String> raffles = new HashMap<>();
 
 
     public Sneaker(String name, String style, double price) {
@@ -23,6 +22,9 @@ public class Sneaker implements Raffle{
     }
 
 
+    public Map<String, String> getRaffles() {
+        return this.raffles;
+    }
     public EnumSet<Sizes> getSizes() {
         return this.sizes;
     }
@@ -55,11 +57,7 @@ public class Sneaker implements Raffle{
         return this.price;
     }
 
-    @Override
-    public void register() {
-        // TODO Auto-generated method stub
-        
-    }
+
 
     @Override
     public void cancel() {
@@ -69,8 +67,7 @@ public class Sneaker implements Raffle{
 
     @Override
     public Integer totalEntries() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.raffles.size();
     }
 
     @Override
@@ -88,6 +85,13 @@ public class Sneaker implements Raffle{
     @Override
     public String toString() {
         return getName() + "\n" + getStyle() + "\n" + getPrice()+ " €\n" + getSizes();
+    }
+
+
+    @Override
+    public void register(Entry entry) {
+        this.raffles.putIfAbsent(entry.email, entry.payment);
+        
     }
     
 }

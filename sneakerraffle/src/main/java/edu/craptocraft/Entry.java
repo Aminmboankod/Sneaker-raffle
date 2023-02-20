@@ -1,7 +1,5 @@
 package edu.craptocraft;
 
-import java.util.Optional;
-
 public class Entry {
 
     String email = null;

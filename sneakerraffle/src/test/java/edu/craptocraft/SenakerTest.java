@@ -9,10 +9,11 @@ import org.junit.Test;
 public class SenakerTest {
 
     Raffle craft;
-
+    Entry entry;
 
     @Before
     public void setup() {
+        entry = new Entry("squanchy@closet.in");
         craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
     }
 
@@ -27,6 +28,23 @@ public class SenakerTest {
     public void toStringTest(){
         assertEquals("Nike Craft General Purpose\nBrown\n109.99 €\nnull", craft.toString());
     }
+
+    @Test
+    public void testRegister() {
+        assertEquals(0, craft.getRaffles().size());
+        craft.register(entry);
+        assertEquals(1, craft.getRaffles().size());
+
+    // Squanchy intenta registrar otra participacion
+    // pero el sistema bloquea el registro.
+    // El total de participaciones sigue siendo 1
+    
+        craft.register(entry);
+        assertEquals(1, craft.getRaffles().size());
+
+    }
+
+
 
     
 }

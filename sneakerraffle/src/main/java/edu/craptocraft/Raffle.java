@@ -1,16 +1,16 @@
 package edu.craptocraft;
 
-import edu.craptocraft.Entry;
-
+import java.util.Map;
 
 public interface Raffle {
     
     void sizesRun(Sizes size, Sizes sizes);
     Double price();
-    void register();
+    void register(Entry entry);
     void cancel();
     Integer totalEntries();
     String listEntries();
-    javax.swing.RowFilter.Entry draw();
+    Entry draw();
+    Map<String, String> getRaffles();
 
 }
