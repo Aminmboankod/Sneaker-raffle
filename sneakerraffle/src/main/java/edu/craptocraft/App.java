@@ -62,10 +62,10 @@ public class App
          * configurar el rango de tallas de una sneaker.
          */
 
-    //     Raffle craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
-    //     // indica el rango de tallas
-    //     craft.sizesRun(Sizes.CUARENTA, Sizes.CUARENTAYDOS);
-    //     GUI.drawSneaker(craft);
+        Raffle craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
+        // indica el rango de tallas
+        craft.sizesRun(Sizes.CUARENTA, Sizes.CUARENTAYDOS);
+        GUI.drawSneaker(craft);
 
     //     /**
     //      * El usuario Squanchy introduce sus datos
@@ -82,18 +82,18 @@ public class App
     //      * email y método de pago.
     //      */
 
-    //     Entry entry = new Entry("squanchy@closet.in");
-    //     entry.setUserName("Squanchy");
-    //     entry.setSize(Sizes.CUARENTA);
-    //     entry.setAddress("Nearest closet s/n, 90210, Jerry's House, Via Lactea");
-    //     entry.setTotal(craft.price());
-    //     entry.payment("squanchy@paypal.com");
+        Entry entry = new Entry("squanchy@closet.in");
+        entry.setUserName("Squanchy");
+        entry.setSize(Sizes.CUARENTA);
+        entry.setAddress("Nearest closet s/n, 90210, Jerry's House, Via Lactea");
+        entry.setTotal(craft.price());
+        entry.payment("squanchy@paypal.com");
 
     //     /**
     //      * Añade a la clase GUI la rutina drawEntry()
     //      * para representar la entrada.
     //      */
-    //     GUI.drawEntry(entry);
+        GUI.drawEntry(entry);
 
     //     /**
     //      * Añade la participacion en la rifa.
@@ -110,58 +110,58 @@ public class App
     //     // Muestra el total de participaciones 
     //     // en la rifa que ha de ser 1
 
-    //     craft.register(entry);
-    //     System.out.println("\t\tSquanchy in:" + craft.totalEntries());
+        craft.register(entry);
+        System.out.println("\t\tSquanchy in:" + craft.totalEntries());
 
     //     // Squanchy intenta registrar otra participacion
     //     // pero el sistema bloquea el registro.
     //     // El total de participaciones sigue siendo 1
 
-    //     craft.register(entry);
-    //     System.out.println("\t\tSquanchy out!:" + craft.totalEntries());
+        craft.register(entry);
+        System.out.println("\t\tSquanchy out!:" + craft.totalEntries());
 
-    //     // Squanchy intenta registrar otra participacion
-    //     // cambiando su email pero manteniendo su metodo de pago
-    //     // El sistema bloquea el registro.
+        // Squanchy intenta registrar otra participacion
+        // cambiando su email pero manteniendo su metodo de pago
+        // El sistema bloquea el registro.
 
-    //     Entry doubleEntry = new Entry("squan.chy@closet.in");
-    //     doubleEntry.payment("squanchy@paypal.com");
-    //     craft.register(doubleEntry);
-    //     System.out.println("\t\tSquanchy out!:" + craft.totalEntries());
+        Entry doubleEntry = new Entry("squan.chy@closet.in");
+        doubleEntry.payment("squanchy@paypal.com");
+        craft.register(doubleEntry);
+        System.out.println("\t\tSquanchy out!:" + craft.totalEntries());
 
     //     /**
     //      * Genera dos participaciones más
     //      * y registralas en la rifa.
     //      */
 
-    //     Entry birdman = new Entry("birdman@love.in");
-    //     birdman.setUserName("Birdman");
-    //     birdman.setSize(Sizes.CUARENTA);
-    //     birdman.setAddress("Melrose Place, 90210, Los Angeles");
-    //     birdman.setTotal(craft.price());
-    //     birdman.payment("birdman@paypal.com");
+        Entry birdman = new Entry("birdman@love.in");
+        birdman.setUserName("Birdman");
+        birdman.setSize(Sizes.CUARENTA);
+        birdman.setAddress("Melrose Place, 90210, Los Angeles");
+        birdman.setTotal(craft.price());
+        birdman.payment("birdman@paypal.com");
 
-    //     Entry morty = new Entry("morty@business.com");
-    //     morty.setUserName("Morty");
-    //     morty.setSize(Sizes.CUARENTA);
-    //     morty.setAddress("Melrose Place, 90210, Los Angeles");
-    //     morty.setTotal(craft.price());
-    //     morty.payment("morty@paypal.com");
+        Entry morty = new Entry("morty@business.com");
+        morty.setUserName("Morty");
+        morty.setSize(Sizes.CUARENTA);
+        morty.setAddress("Melrose Place, 90210, Los Angeles");
+        morty.setTotal(craft.price());
+        morty.payment("morty@paypal.com");
 
-    //     Entry summer = new Entry("summer@business.com");
-    //     summer.setUserName("Summer");
-    //     summer.setSize(Sizes.CUARENTA);
-    //     summer.setAddress("Melrose Place, 90210, Los Angeles");
-    //     summer.setTotal(craft.price());
-    //     summer.payment("summer@paypal.com");
+        Entry summer = new Entry("summer@business.com");
+        summer.setUserName("Summer");
+        summer.setSize(Sizes.CUARENTA);
+        summer.setAddress("Melrose Place, 90210, Los Angeles");
+        summer.setTotal(craft.price());
+        summer.payment("summer@paypal.com");
 
-    //     craft.register(birdman, morty, summer);
+        craft.register(birdman, morty, summer);
 
     //     /**
     //      * Muestra el email de todos los participantes en la rifa.
     //      */
 
-    //     System.out.println("\n\t\tEntries:\n\t\t" + craft.listEntries());
+        System.out.println("\n\t\tEntries:\n\t\t" + craft.listEntries());
 
     //     /**
     //      * Summer se lo piensa y decide anular su participacion.
