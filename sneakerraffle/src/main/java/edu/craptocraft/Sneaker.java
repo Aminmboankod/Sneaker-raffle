@@ -2,10 +2,14 @@ package edu.craptocraft;
 
 
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Optional;
+import java.util.stream.Collectors;
+
 
 public class Sneaker implements Raffle{
 
@@ -72,9 +76,10 @@ public class Sneaker implements Raffle{
     }
 
     @Override
-    public String listEntries() {
-        // TODO Auto-generated method stub
-        return null;
+    public List<String> listEntries() {
+        List<String> keys = getRaffles().keySet().stream()
+				                .collect(Collectors.toList());
+        return keys;
     }
 
     @Override
@@ -96,5 +101,19 @@ public class Sneaker implements Raffle{
         }
         
     }
+
+
+	@Override
+	public void register(Entry one, Entry two, Entry tree) {
+        List<Entry> list = new ArrayList<>(); 
+        list.add(tree);
+        list.add(two);
+        list.add(one);
+        for (Entry entry : list) {
+            while (!(getRaffles().containsKey(entry.email) || getRaffles().containsValue(entry.payment))) {
+                this.raffles.putIfAbsent(entry.email, entry.payment);
+            }
+        }		
+	}
     
 }

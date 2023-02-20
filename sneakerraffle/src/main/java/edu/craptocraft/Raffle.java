@@ -1,5 +1,6 @@
 package edu.craptocraft;
 
+import java.util.List;
 import java.util.Map;
 
 public interface Raffle {
@@ -9,8 +10,9 @@ public interface Raffle {
     void register(Entry entry);
     void cancel();
     Integer totalEntries();
-    String listEntries();
+    List<String> listEntries();
     Entry draw();
     Map<String, String> getRaffles();
+    void register(Entry birdman, Entry morty, Entry summer);
 
 }
