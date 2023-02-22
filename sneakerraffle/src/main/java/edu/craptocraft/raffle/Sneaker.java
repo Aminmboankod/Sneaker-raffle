@@ -112,9 +112,7 @@ public class Sneaker implements Raffle{
         list.add(two);
         list.add(one);
         for (Entry entry : list) {
-            while (!(getRaffles().containsKey(entry.email) || getRaffles().containsValue(entry.payment))) {
-                this.raffles.putIfAbsent(entry.email, entry.payment);
-            }
+            register(entry);
         }		
 	}
     
