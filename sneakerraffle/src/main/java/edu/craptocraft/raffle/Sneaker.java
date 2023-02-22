@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import edu.craptocraft.Sizes;
 
@@ -30,9 +31,13 @@ public class Sneaker implements Raffle{
         return this.raffles;
     }
     public List<String> getSizes() {
-        List<String> sizesList = this.sizes.stream()
-                                         .map(e -> e.getUSsize())
-                                         .collect(Collectors.toList());
+        List<String> sizesList = null;
+        if(this.sizes != null) {
+            sizesList = this.sizes.stream()
+                                    .map(e -> e.getUSsize())
+                                    .collect(Collectors.toList());
+        
+        }
         return sizesList;
     }
 
