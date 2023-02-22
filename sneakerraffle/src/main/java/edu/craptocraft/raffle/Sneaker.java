@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import edu.craptocraft.Sizes;
 
@@ -70,12 +69,6 @@ public class Sneaker implements Raffle{
     }
 
 
-
-    @Override
-    public void cancel() {
-
-    }
-
     @Override
     public Integer totalEntries() {
         return this.raffles.size();
@@ -115,5 +108,11 @@ public class Sneaker implements Raffle{
             register(entry);
         }		
 	}
+
+
+    @Override
+    public void cancel(Entry entry) {
+        getRaffles().remove(entry.email);
+    }
     
 }

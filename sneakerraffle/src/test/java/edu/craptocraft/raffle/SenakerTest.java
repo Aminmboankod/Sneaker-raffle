@@ -2,8 +2,10 @@ package edu.craptocraft.raffle;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.EnumSet;
 
@@ -63,6 +65,15 @@ public class SenakerTest {
         assertEquals("Nike Craft General Purpose\nBrown\n109.99 €\n[6.5 US, 7.0 US]", craft.toString());
     }
 
+
+    // compruebo si se elimina del hasmap el entry que pasamos por parámetros
+    @Test
+    public void cancelTest() {
+        craft.register(entry);
+        craft.cancel(doubleEntry);
+        assertNotEquals("[squanchy@closet.in]", craft.listEntries());
+        
+    }
 
 
 

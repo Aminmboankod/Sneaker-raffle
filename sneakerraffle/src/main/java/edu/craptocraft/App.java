@@ -162,19 +162,19 @@ public class App
 
         craft.register(birdman, morty, summer);
 
-    //     /**
-    //      * Muestra el email de todos los participantes en la rifa.
-    //      */
+        /**
+         * Muestra el email de todos los participantes en la rifa.
+         */
 
         System.out.println("\n\t\tEntries:\n\t\t" + craft.listEntries());
 
-    //     /**
-    //      * Summer se lo piensa y decide anular su participacion.
-    //      * Elimina la participacion de Summer.
-    //      */
+        /**
+         * Summer se lo piensa y decide anular su participacion.
+         * Elimina la participacion de Summer.
+         */
 
-    //     craft.cancel(summer); 
-    //     System.out.println("\n\t\tSummer is gone :\n\t\t" + craft.listEntries());
+        craft.cancel(summer); 
+        System.out.println("\n\t\tSummer is gone :\n\t\t" + craft.listEntries());
 
     //     /**
     //      * Extrae una participacion de la rifa.
