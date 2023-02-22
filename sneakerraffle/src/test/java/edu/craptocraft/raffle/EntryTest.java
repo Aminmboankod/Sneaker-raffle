@@ -1,4 +1,4 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -6,9 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.craptocraft.raffle.Entry;
-import edu.craptocraft.raffle.Raffle;
-import edu.craptocraft.raffle.Sneaker;
+import edu.craptocraft.Sizes;
 
 public class EntryTest {
     

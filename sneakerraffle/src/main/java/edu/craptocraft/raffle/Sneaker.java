@@ -1,9 +1,6 @@
 package edu.craptocraft.raffle;
 
 
-
-
-import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
@@ -32,8 +29,11 @@ public class Sneaker implements Raffle{
     public Map<String, String> getRaffles() {
         return this.raffles;
     }
-    public EnumSet<Sizes> getSizes() {
-        return this.sizes;
+    public List<String> getSizes() {
+        List<String> sizesList = this.sizes.stream()
+                                         .map(e -> e.getUSsize())
+                                         .collect(Collectors.toList());
+        return sizesList;
     }
 
     
@@ -55,7 +55,7 @@ public class Sneaker implements Raffle{
     @Override
     public void sizesRun(Sizes size, Sizes sizes) {
         this.sizes = EnumSet.range(size, sizes);
-
+        
     }
     
 
@@ -68,8 +68,7 @@ public class Sneaker implements Raffle{
 
     @Override
     public void cancel() {
-        // TODO Auto-generated method stub
-        
+
     }
 
     @Override
@@ -80,13 +79,12 @@ public class Sneaker implements Raffle{
     @Override
     public List<String> listEntries() {
         List<String> keys = getRaffles().keySet().stream()
-				                .collect(Collectors.toList());
+				                        .collect(Collectors.toList());
         return keys;
     }
 
     @Override
     public Entry draw() {
-        // TODO Auto-generated method stub
         return null;
     }
 

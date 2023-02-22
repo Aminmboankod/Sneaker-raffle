@@ -2,13 +2,13 @@ package edu.craptocraft;
 
 public enum Sizes {
 
-    TREINTAYNUEVE("6.5", "39"),
-    CUARENTA("7.0", "40"),
-    CARENTAYMEDIO("7.5", "40 1/2"),
-    CUARENTAYUNO("8.0","41" ),
-    CUARENTAYDOS("8.5","42" ),
-    CUARENTAYDOSYMEDIO("9.0", "42"),
-    CUARENTAYTRES("9.5", "43");
+    TREINTAYNUEVE("6.5 US", "39 EU"),
+    CUARENTA("7.0 US", "40 EU"),
+    CARENTAYMEDIO("7.5 US", "40 1/2 EU"),
+    CUARENTAYUNO("8.0 US","41 EU" ),
+    CUARENTAYDOS("8.5 US","42 EU" ),
+    CUARENTAYDOSYMEDIO("9.0 US", "42 EU"),
+    CUARENTAYTRES("9.5 US", "43 EU");
 
     private String USsize;
     private String EUsize;

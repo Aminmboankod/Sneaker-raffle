@@ -1,8 +1,7 @@
 # Sneaker Raffle
 
-Este repositorio es un examen de programación que se ha realizado en 4 horas.
+Esta rama se ha creado para complementar las historias de usuario que no se han podido completar por tiempo en el momento del examen, además, también incluiré refactorizaciones y tomaré decisiones que después de meditarlo considero que pueden hacer más óptimo el programa. 
 
-Para la realización del msimo se dan los siguientes recursos:
 
 
 ## Diagrama de clases
