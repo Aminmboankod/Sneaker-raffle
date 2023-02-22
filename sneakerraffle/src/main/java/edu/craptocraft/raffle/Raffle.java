@@ -15,6 +15,6 @@ public interface Raffle {
     List<String> listEntries();
     Entry draw();
     Map<String, String> getRaffles();
-    void register(Entry birdman, Entry morty, Entry summer);
+    void register(Entry...entries);
 
 }

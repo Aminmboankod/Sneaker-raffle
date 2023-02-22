@@ -106,12 +106,9 @@ public class Sneaker implements Raffle{
 
 
 	@Override
-	public void register(Entry one, Entry two, Entry tree) {
-        List<Entry> list = new ArrayList<>(); 
-        list.add(tree);
-        list.add(two);
-        list.add(one);
-        for (Entry entry : list) {
+	public void register(Entry...entries) {
+
+        for (Entry entry : entries) {
             register(entry);
         }		
 	}
