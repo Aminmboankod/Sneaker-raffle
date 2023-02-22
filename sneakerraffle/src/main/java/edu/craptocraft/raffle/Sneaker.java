@@ -1,14 +1,16 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle;
 
 
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import edu.craptocraft.Sizes;
 
 
 public class Sneaker implements Raffle{

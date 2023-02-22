@@ -1,5 +1,8 @@
 package edu.craptocraft;
 
+import edu.craptocraft.raffle.Entry;
+import edu.craptocraft.raffle.Raffle;
+
 public class GUI {
     
     public GUI(){}

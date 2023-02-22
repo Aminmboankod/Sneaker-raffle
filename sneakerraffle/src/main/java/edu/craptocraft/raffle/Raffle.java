@@ -1,7 +1,9 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle;
 
 import java.util.List;
 import java.util.Map;
+
+import edu.craptocraft.Sizes;
 
 public interface Raffle {
     

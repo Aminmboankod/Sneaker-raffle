@@ -1,4 +1,9 @@
 package edu.craptocraft;
+
+import edu.craptocraft.raffle.Entry;
+import edu.craptocraft.raffle.Raffle;
+import edu.craptocraft.raffle.Sneaker;
+
 /**
  * Cuando una tienda de zapatillas recibe
  * una remesa de sneakers de coleccion
