@@ -1,7 +1,6 @@
 package edu.craptocraft.raffle;
 
 
-import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
@@ -108,7 +107,7 @@ public class Sneaker implements Raffle{
 
         if (!getRaffles().stream().anyMatch(e -> e.getPayment().equals(entry.getPayment())) &&
             !getRaffles().stream().anyMatch(e -> e.getEmail().equals(entry.getEmail()))) {
-        getRaffles().add(entry);
+            getRaffles().add(entry);
     
         }
     }

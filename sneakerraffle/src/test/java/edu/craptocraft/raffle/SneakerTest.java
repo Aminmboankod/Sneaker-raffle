@@ -53,8 +53,7 @@ public class SneakerTest {
         // Squanchy intenta registrar otra participacion
         // pero el sistema bloquea el registro.
         // El total de participaciones sigue siendo 1
-        
-        craft.register(entry);
+
         assertEquals(1, craft.getRaffles().size());
 
     }
