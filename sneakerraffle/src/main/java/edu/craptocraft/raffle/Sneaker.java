@@ -99,8 +99,11 @@ public class Sneaker implements Raffle{
 
     @Override
     public void register(Entry entry) {
-        while (!(getRaffles().contains(entry))) {
+
+        if (!getRaffles().stream().anyMatch(e -> e.getPayment().equals(entry.getPayment())) &&
+            !getRaffles().stream().anyMatch(e -> e.getEmail().equals(entry.getEmail()))) {
             getRaffles().add(entry);
+    
         }
     }
 

@@ -15,7 +15,7 @@ import org.junit.Test;
 import edu.craptocraft.raffle.resources.Sizes;
 
 
-public class SenakerTest {
+public class SneakerTest {
 
     Raffle craft;
     Entry entry;
@@ -25,7 +25,7 @@ public class SenakerTest {
 
     @Before
     public void setup() {
-        doubleEntry = new Entry("squanchy@closet.in");
+        doubleEntry = new Entry("squan.chy@closet.in");
         entry = new Entry("squanchy@closet.in");
         craft = new Sneaker("Nike Craft General Purpose", "Brown", 109.99);
     }
