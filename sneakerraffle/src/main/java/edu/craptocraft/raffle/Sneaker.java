@@ -77,9 +77,15 @@ public class Sneaker implements Raffle{
     }
 
     @Override
-    public List<Entry> listEntries() {
-        List<Entry> listEntry = new ArrayList<>(getRaffles());
-        return listEntry;
+    public List<String> listEntries() {
+        List<String> entryList = null;
+        if(this.sizes != null) {
+            entryList = getRaffles().stream()
+                                    .map(e -> e.getPayment())
+                                    .collect(Collectors.toList());
+        
+        }
+        return entryList;
     }
 
     @Override
@@ -102,7 +108,7 @@ public class Sneaker implements Raffle{
 
         if (!getRaffles().stream().anyMatch(e -> e.getPayment().equals(entry.getPayment())) &&
             !getRaffles().stream().anyMatch(e -> e.getEmail().equals(entry.getEmail()))) {
-            getRaffles().add(entry);
+        getRaffles().add(entry);
     
         }
     }

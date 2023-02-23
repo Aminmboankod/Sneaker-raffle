@@ -11,7 +11,7 @@ public interface Raffle {
     Double price();
     void register(Entry entry);
     Integer totalEntries();
-    List<Entry> listEntries();
+    List<String> listEntries();
     Entry draw();
     Set<Entry> getRaffles();
     void register(Entry...entries);
