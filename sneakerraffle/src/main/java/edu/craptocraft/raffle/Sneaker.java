@@ -27,6 +27,8 @@ public class Sneaker implements Raffle{
     }
 
 
+    // ------ Getters --------
+
     public Set<Entry> getRaffles() {
         return this.raffles;
     }
@@ -55,20 +57,21 @@ public class Sneaker implements Raffle{
         return price;
     }
 
-
-
-    @Override
-    public void sizesRun(Sizes size, Sizes sizes) {
-        this.sizes = EnumSet.range(size, sizes);
-        
-    }
-    
+    // ------- Setter -------
 
     @Override
     public Double price() {
         return this.price;
     }
 
+
+    // ------ Logic -------
+
+    @Override
+    public void sizesRun(Sizes size, Sizes sizes) {
+        this.sizes = EnumSet.range(size, sizes);
+        
+    }
 
     @Override
     public Integer totalEntries() {
