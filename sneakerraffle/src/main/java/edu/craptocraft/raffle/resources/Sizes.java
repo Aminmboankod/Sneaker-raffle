@@ -22,6 +22,10 @@ public enum Sizes {
         return this.USsize;
     }
 
+    public String getSizes(Sizes USsize, Sizes EUsize){
+        return this.USsize + this.EUsize;
+    } 
+
     
 
     
