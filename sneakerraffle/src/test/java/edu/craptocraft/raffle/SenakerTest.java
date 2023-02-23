@@ -75,6 +75,8 @@ public class SenakerTest {
         
     }
 
+    // no puedo testear el metodo draw() porque elige al azar un entry del hashSet
+
 
 
     

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -83,7 +84,11 @@ public class Sneaker implements Raffle{
 
     @Override
     public Entry draw() {
-        return null;
+        Entry[] entriesArray = raffles.toArray(new Entry[0]);
+        Random random = new Random();
+        int randomIndex = random.nextInt(entriesArray.length);
+        return entriesArray[randomIndex];
+        
     }
 
     @Override
