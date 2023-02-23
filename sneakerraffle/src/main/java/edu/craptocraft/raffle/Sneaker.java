@@ -124,7 +124,7 @@ public class Sneaker implements Raffle{
 
     @Override
     public void cancel(Entry entry) {
-        getRaffles().remove(entry.email);
+        getRaffles().remove(entry);
     }
     
 }
