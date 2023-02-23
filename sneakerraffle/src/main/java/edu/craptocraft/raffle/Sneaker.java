@@ -98,7 +98,12 @@ public class Sneaker implements Raffle{
 
     @Override
     public String toString() {
-        return getName() + "\n" + getStyle() + "\n" + getPrice()+ " €\n" + getSizes();
+        StringBuilder sneakerBuilder = new StringBuilder();
+        sneakerBuilder.append(getName()).append("\n")
+                      .append(getStyle()).append("\n")
+                      .append(getPrice()).append(" €\n")
+                      .append(getSizes());
+        return sneakerBuilder.toString();
     }
 
 
