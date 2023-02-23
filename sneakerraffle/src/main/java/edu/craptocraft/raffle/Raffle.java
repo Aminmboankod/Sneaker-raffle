@@ -1,7 +1,7 @@
 package edu.craptocraft.raffle;
 
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
 import edu.craptocraft.Sizes;
 
@@ -11,9 +11,9 @@ public interface Raffle {
     Double price();
     void register(Entry entry);
     Integer totalEntries();
-    List<String> listEntries();
+    List<Entry> listEntries();
     Entry draw();
-    Map<String, String> getRaffles();
+    Set<Entry> getRaffles();
     void register(Entry...entries);
     void cancel(Entry summer);
 

@@ -24,6 +24,10 @@ public class GUI {
         System.out.println(user.toString());
     }
 
+    public static void drawWinner(Entry user) {
+        System.out.println("¡¡ You are a Winner !!:\n"+user);
+    }
+
 
 }
 

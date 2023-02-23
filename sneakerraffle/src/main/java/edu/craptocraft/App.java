@@ -176,15 +176,15 @@ public class App
         craft.cancel(summer); 
         System.out.println("\n\t\tSummer is gone :\n\t\t" + craft.listEntries());
 
-    //     /**
-    //      * Extrae una participacion de la rifa.
-    //      * Es el ganador de la rifa.
-    //      * Printa sus datos por consola.
-    //      * Añade la rutina drawWinner() a GUI. 
-    //      */
+        /**
+         * Extrae una participacion de la rifa.
+         * Es el ganador de la rifa.
+         * Printa sus datos por consola.
+         * Añade la rutina drawWinner() a GUI. 
+         */
 
-    //     Entry winner = craft.draw();
-    //     GUI.drawWinner(winner);      
+        Entry winner = craft.draw();
+        GUI.drawWinner(winner);      
         
     //     /**
     //      * Conecta con el sistema de pagos para

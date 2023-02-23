@@ -1,10 +1,11 @@
 package edu.craptocraft.raffle;
 
 
+import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import edu.craptocraft.Sizes;
@@ -16,7 +17,7 @@ public class Sneaker implements Raffle{
     private String name;
     private Double price;
     public EnumSet<Sizes> sizes;
-    public Map<String, String> raffles = new HashMap<>();
+    public Set<Entry> raffles = new HashSet();
 
 
     public Sneaker(String name, String style, double price) {
@@ -26,7 +27,7 @@ public class Sneaker implements Raffle{
     }
 
 
-    public Map<String, String> getRaffles() {
+    public Set<Entry> getRaffles() {
         return this.raffles;
     }
     public List<String> getSizes() {
@@ -75,10 +76,9 @@ public class Sneaker implements Raffle{
     }
 
     @Override
-    public List<String> listEntries() {
-        List<String> keys = getRaffles().keySet().stream()
-				                        .collect(Collectors.toList());
-        return keys;
+    public List<Entry> listEntries() {
+        List<Entry> listEntry = new ArrayList<>(getRaffles());
+        return listEntry;
     }
 
     @Override
@@ -94,12 +94,10 @@ public class Sneaker implements Raffle{
 
     @Override
     public void register(Entry entry) {
-        while (!(getRaffles().containsKey(entry.email) || getRaffles().containsValue(entry.payment))) {
-            this.raffles.putIfAbsent(entry.email, entry.payment);
+        while (!(getRaffles().contains(entry))) {
+            getRaffles().add(entry);
         }
-        
     }
-
 
 	@Override
 	public void register(Entry...entries) {
