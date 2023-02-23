@@ -3,7 +3,7 @@ package edu.craptocraft.raffle;
 import java.util.List;
 import java.util.Set;
 
-import edu.craptocraft.Sizes;
+import edu.craptocraft.raffle.resources.Sizes;
 
 public interface Raffle {
     

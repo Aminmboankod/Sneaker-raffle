@@ -1,10 +1,11 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle.resources;
 
 
 import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 
 
 public class SizesTest {

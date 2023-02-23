@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import edu.craptocraft.Sizes;
+import edu.craptocraft.raffle.resources.Sizes;
 
 
 public class Sneaker implements Raffle{

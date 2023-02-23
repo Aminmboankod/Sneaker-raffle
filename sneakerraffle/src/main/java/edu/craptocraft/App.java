@@ -1,8 +1,12 @@
 package edu.craptocraft;
 
+import edu.craptocraft.payment.Payment;
+import edu.craptocraft.payment.Paypal;
 import edu.craptocraft.raffle.Entry;
 import edu.craptocraft.raffle.Raffle;
 import edu.craptocraft.raffle.Sneaker;
+import edu.craptocraft.raffle.resources.GUI;
+import edu.craptocraft.raffle.resources.Sizes;
 
 /**
  * Cuando una tienda de zapatillas recibe
@@ -202,13 +206,13 @@ public class App
     //      * para todos.
     //      */
 
-    //     Payment paypal = new Paypal();
-    //     boolean userExists = paypal.autentication(winner.getPayment());
-    //     boolean transaction = false;
-    //     if (userExists) {
-    //         transaction = paypal.pay(winner.getPayment(), winner.getTotal());
-    //     }
+        Payment paypal = new Paypal();
+        boolean userExists = paypal.autentication(winner.getPayment());
+        boolean transaction = false;
+        if (userExists) {
+            transaction = paypal.pay(winner.getPayment(), winner.getTotal());
+        }
 
-    //     System.out.println("\t\t" + winner.getPayment() + " credit: " + paypal.credit(winner.getPayment()));
+        System.out.println("\t\t" + winner.getPayment() + " credit: " + paypal.credit(winner.getPayment()));
     }
 }

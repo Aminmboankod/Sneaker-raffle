@@ -12,7 +12,7 @@ import java.util.EnumSet;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.craptocraft.Sizes;
+import edu.craptocraft.raffle.resources.Sizes;
 
 
 public class SenakerTest {

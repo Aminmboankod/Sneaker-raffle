@@ -6,7 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.craptocraft.Sizes;
+import edu.craptocraft.raffle.resources.Sizes;
 
 public class EntryTest {
     

@@ -1,4 +1,4 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle.resources;
 
 public enum Sizes {
 

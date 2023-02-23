@@ -1,6 +1,6 @@
 package edu.craptocraft.raffle;
 
-import edu.craptocraft.Sizes;
+import edu.craptocraft.raffle.resources.Sizes;
 
 public class Entry {
 

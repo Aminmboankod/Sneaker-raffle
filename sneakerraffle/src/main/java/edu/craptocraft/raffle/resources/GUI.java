@@ -1,4 +1,4 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle.resources;
 
 import edu.craptocraft.raffle.Entry;
 import edu.craptocraft.raffle.Raffle;
