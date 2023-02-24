@@ -24,7 +24,7 @@ public class Paypal implements Payment{
 
     @Override
     public boolean autentication(String payment) {
-        return true;
+        return getUsers().containsKey(payment);
     }
 
     @Override
