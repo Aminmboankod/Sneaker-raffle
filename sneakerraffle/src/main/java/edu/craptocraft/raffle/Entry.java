@@ -75,4 +75,5 @@ public class Entry {
                     .append("Total: ").append(getTotal()).append(" €");
         return entryString.toString();
     }
+
 }
