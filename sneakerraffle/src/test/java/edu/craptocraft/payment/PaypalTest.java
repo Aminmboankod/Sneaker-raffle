@@ -1,5 +1,6 @@
 package edu.craptocraft.payment;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -40,6 +41,11 @@ public class PaypalTest {
     public void payTest(){
         assertTrue(paypal.pay("summer@paypal.com", 90d));
 
+    }
+
+    @Test
+    public void creditTest() {
+        assertEquals("200.0", paypal.credit("summer@paypal.com"));
     }
 
     
