@@ -7,18 +7,18 @@ import java.util.Map;
 
 public class Paypal implements Payment{
 
-    private final Map<String, String> users;
+    private final Map<String, Double> users;
 
 
     public Paypal(){
         users = new HashMap<>();
-        users.put("squanchy@paypal.com", "200");
-        users.put("birdman@paypal.com", "200");
-        users.put("morty@paypal.com", "200");
-        users.put("summer@paypal.com", "200");
+        users.put("squanchy@paypal.com", 200d);
+        users.put("birdman@paypal.com", 200d);
+        users.put("morty@paypal.com", 200d);
+        users.put("summer@paypal.com", 200d);
     }
 
-    public Map<String, String> getUsers(){
+    public Map<String, Double> getUsers(){
         return this.users;
     }
 
@@ -34,7 +34,7 @@ public class Paypal implements Payment{
 
     @Override
     public String credit(String payment) {
-        return "200€";
+        return "200";
     }
 
 }

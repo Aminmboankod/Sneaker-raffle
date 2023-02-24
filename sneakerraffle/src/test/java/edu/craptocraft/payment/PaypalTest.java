@@ -13,16 +13,16 @@ public class PaypalTest {
 
 
     Payment paypal;
-    private Map<String, String> users;
+    private Map<String, Double> users;
 
     @Before
     public void setup(){
         paypal = new Paypal();
         users = new HashMap<>();
-        users.put("squanchy@paypal.com", "200");
-        users.put("birdman@paypal.com", "200");
-        users.put("morty@paypal.com", "200");
-        users.put("summer@paypal.com", "200");
+        users.put("squanchy@paypal.com", 200d);
+        users.put("birdman@paypal.com", 200d);
+        users.put("morty@paypal.com", 200d);
+        users.put("summer@paypal.com", 200d);
     }
 
     @Test
