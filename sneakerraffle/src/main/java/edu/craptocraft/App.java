@@ -190,21 +190,21 @@ public class App
         Entry winner = craft.draw();
         GUI.drawWinner(winner);      
         
-    //     /**
-    //      * Conecta con el sistema de pagos para
-    //      * realizar el cobro.
-    //      * 
-    //      * El sistema de pagos autoriza el cargo
-    //      * si el usuario existe en el sistema
-    //      * y descuenta de sus fondos la cantidad
-    //      * que supone la rifa.
-    //      * 
-    //      * Da de alta a los cuatro usuarios
-    //      * que hemos creado con su cuenta de correo
-    //      * en Paypal.
-    //      * Establece un credito inicial de 200€
-    //      * para todos.
-    //      */
+        /**
+         * Conecta con el sistema de pagos para
+         * realizar el cobro.
+         * 
+         * El sistema de pagos autoriza el cargo
+         * si el usuario existe en el sistema
+         * y descuenta de sus fondos la cantidad
+         * que supone la rifa.
+         * 
+         * Da de alta a los cuatro usuarios
+         * que hemos creado con su cuenta de correo
+         * en Paypal.
+         * Establece un credito inicial de 200€
+         * para todos.
+         */
 
         Payment paypal = new Paypal();
         boolean userExists = paypal.autentication(winner.getPayment());

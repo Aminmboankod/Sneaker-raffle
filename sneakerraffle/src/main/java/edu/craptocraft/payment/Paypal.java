@@ -1,16 +1,26 @@
 package edu.craptocraft.payment;
 
-import edu.craptocraft.raffle.Entry;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class Paypal implements Payment{
 
-    private final Entry[] users = {};
+    private final Map<String, String> users;
 
 
     public Paypal(){
-        
+        users = new HashMap<>();
+        users.put("squanchy@paypal.com", "200");
+        users.put("birdman@paypal.com", "200");
+        users.put("morty@paypal.com", "200");
+        users.put("summer@paypal.com", "200");
     }
 
+    public Map<String, String> getUsers(){
+        return this.users;
+    }
 
     @Override
     public boolean autentication(String payment) {
