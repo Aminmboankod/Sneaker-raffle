@@ -27,14 +27,23 @@ public class Paypal implements Payment{
         return getUsers().containsKey(payment);
     }
 
+
+    //en este método de momento aplico la lógica del 
+    //cobro al usuario aunque su output sea un booleano.
     @Override
     public boolean pay(String payment, Double total) {
-        return true;
+        if (getUsers().get(payment) >= total) {
+            getUsers().put(payment, total);
+            return true;
+        } else {
+            return false;
+        }
+        
     }
 
     @Override
     public String credit(String payment) {
-        return "200";
+        return getUsers().get(payment).toString();
     }
 
 }

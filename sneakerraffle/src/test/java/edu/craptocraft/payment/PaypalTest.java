@@ -33,11 +33,12 @@ public class PaypalTest {
     @Test
     public void autenticationTest(){
         assertTrue(paypal.autentication("summer@paypal.com"));
-        assertFalse(paypal.autentication("summmer@paypal.com"));
+        assertFalse(paypal.autentication("buuumer@paypal.com"));
     }
 
     @Test
     public void payTest(){
+        assertTrue(paypal.pay("summer@paypal.com", 90d));
 
     }
 
