@@ -33,7 +33,7 @@ public class Paypal implements Payment{
     @Override
     public boolean pay(String payment, Double total) {
         if (getUsers().get(payment) >= total) {
-            getUsers().put(payment, total);
+            getUsers().put(payment, getUsers().get(payment) - total);
             return true;
         } else {
             return false;
