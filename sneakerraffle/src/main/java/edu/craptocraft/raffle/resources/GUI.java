@@ -1,4 +1,7 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle.resources;
+
+import edu.craptocraft.raffle.Entry;
+import edu.craptocraft.raffle.Raffle;
 
 public class GUI {
     
@@ -19,6 +22,10 @@ public class GUI {
 
     public static void drawEntry(Entry user) {
         System.out.println(user.toString());
+    }
+
+    public static void drawWinner(Entry user) {
+        System.out.println("¡¡ You are a Winner !!:\n"+user);
     }
 
 

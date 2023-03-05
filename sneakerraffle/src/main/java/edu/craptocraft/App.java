@@ -1,4 +1,13 @@
 package edu.craptocraft;
+
+import edu.craptocraft.payment.Payment;
+import edu.craptocraft.payment.Paypal;
+import edu.craptocraft.raffle.Entry;
+import edu.craptocraft.raffle.Raffle;
+import edu.craptocraft.raffle.Sneaker;
+import edu.craptocraft.raffle.resources.GUI;
+import edu.craptocraft.raffle.resources.Sizes;
+
 /**
  * Cuando una tienda de zapatillas recibe
  * una remesa de sneakers de coleccion
@@ -157,53 +166,53 @@ public class App
 
         craft.register(birdman, morty, summer);
 
-    //     /**
-    //      * Muestra el email de todos los participantes en la rifa.
-    //      */
+        /**
+         * Muestra el email de todos los participantes en la rifa.
+         */
 
         System.out.println("\n\t\tEntries:\n\t\t" + craft.listEntries());
 
-    //     /**
-    //      * Summer se lo piensa y decide anular su participacion.
-    //      * Elimina la participacion de Summer.
-    //      */
+        /**
+         * Summer se lo piensa y decide anular su participacion.
+         * Elimina la participacion de Summer.
+         */
 
-    //     craft.cancel(summer); 
-    //     System.out.println("\n\t\tSummer is gone :\n\t\t" + craft.listEntries());
+        craft.cancel(summer); 
+        System.out.println("\n\t\tSummer is gone :\n\t\t" + craft.listEntries());
 
-    //     /**
-    //      * Extrae una participacion de la rifa.
-    //      * Es el ganador de la rifa.
-    //      * Printa sus datos por consola.
-    //      * Añade la rutina drawWinner() a GUI. 
-    //      */
+        /**
+         * Extrae una participacion de la rifa.
+         * Es el ganador de la rifa.
+         * Printa sus datos por consola.
+         * Añade la rutina drawWinner() a GUI. 
+         */
 
-    //     Entry winner = craft.draw();
-    //     GUI.drawWinner(winner);      
+        Entry winner = craft.draw();
+        GUI.drawWinner(winner);      
         
-    //     /**
-    //      * Conecta con el sistema de pagos para
-    //      * realizar el cobro.
-    //      * 
-    //      * El sistema de pagos autoriza el cargo
-    //      * si el usuario existe en el sistema
-    //      * y descuenta de sus fondos la cantidad
-    //      * que supone la rifa.
-    //      * 
-    //      * Da de alta a los cuatro usuarios
-    //      * que hemos creado con su cuenta de correo
-    //      * en Paypal.
-    //      * Establece un credito inicial de 200€
-    //      * para todos.
-    //      */
+        /**
+         * Conecta con el sistema de pagos para
+         * realizar el cobro.
+         * 
+         * El sistema de pagos autoriza el cargo
+         * si el usuario existe en el sistema
+         * y descuenta de sus fondos la cantidad
+         * que supone la rifa.
+         * 
+         * Da de alta a los cuatro usuarios
+         * que hemos creado con su cuenta de correo
+         * en Paypal.
+         * Establece un credito inicial de 200€
+         * para todos.
+         */
 
-    //     Payment paypal = new Paypal();
-    //     boolean userExists = paypal.autentication(winner.getPayment());
-    //     boolean transaction = false;
-    //     if (userExists) {
-    //         transaction = paypal.pay(winner.getPayment(), winner.getTotal());
-    //     }
+        Payment paypal = new Paypal();
+        boolean userExists = paypal.autentication(winner.getPayment());
+        boolean transaction = false;
+        if (userExists) {
+            transaction = paypal.pay(winner.getPayment(), winner.getTotal());
+        }
 
-    //     System.out.println("\t\t" + winner.getPayment() + " credit: " + paypal.credit(winner.getPayment()));
+        System.out.println("\t\t" + winner.getPayment() + " credit: " + paypal.credit(winner.getPayment()));
     }
 }

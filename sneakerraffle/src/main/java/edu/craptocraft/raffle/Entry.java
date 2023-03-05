@@ -1,4 +1,6 @@
-package edu.craptocraft;
+package edu.craptocraft.raffle;
+
+import edu.craptocraft.raffle.resources.Sizes;
 
 public class Entry {
 
@@ -12,6 +14,8 @@ public class Entry {
     public Entry(String email) {
         this.email = email;
     }
+
+    // ------Getters-------
 
     public String getUserName() {
         return userName;
@@ -41,11 +45,11 @@ public class Entry {
         return size;
     }
 
+    // -------Setters---------- 
+
     public void setTotal(Double total) {
         this.total = total;
     }
-
-
 
     public void payment(String payment) {
         this.payment = payment;
@@ -59,8 +63,17 @@ public class Entry {
         return this.payment;
     }
 
+
+    // toString refactorizado para usar StringBuilder y así no usar tanta memoria y hacer que sea más eficiente
+    
     @Override
     public String toString() {
-        return "email: " + getEmail() + "\nAddress: " + getAddress() + "\nPayment: " + getPayment() + "\nTotal: " + getTotal()+" €"; 
+        StringBuilder entryString = new StringBuilder();
+        entryString.append("email: ").append(getEmail()).append("\n")
+                    .append("Address: ").append(getAddress()).append("\n")
+                    .append("Payment: ").append(getPayment()).append("\n")
+                    .append("Total: ").append(getTotal()).append(" €");
+        return entryString.toString();
     }
+
 }
